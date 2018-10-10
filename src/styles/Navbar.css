@@ -4,10 +4,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ddd;
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 .navbar-logo{
