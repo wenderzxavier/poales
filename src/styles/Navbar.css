@@ -1,4 +1,4 @@
-.nav-bar{
+#nav-bar{
     width: 100%;
     height: 80px;
     display: flex;
@@ -10,6 +10,7 @@
     left: 0;
     z-index: 10;
 }
+
 
 .navbar-logo{
     width: 60%;
@@ -25,11 +26,34 @@
     font-weight: 500;
     letter-spacing: 5px;
     margin: 0px 10px;
-    color: green;
+    color: white;
 }
 
 #homepage-link{
     display: flex;
     align-items: center;
     text-decoration: none;
+    display: none;
 }
+
+.navbar-link{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px){
+    #nav-bar{
+        flex-direction: column;
+        justify-content: center;
+        height: 140px;
+    }
+
+    #homepage-link{
+        justify-content: center;
+    }
+
+    .navbar-link{
+        padding: 5px 0px;
+    }
+}
+
