@@ -20,6 +20,7 @@ const Cover = () => (
                 <p>Scroll To Learn</p>
             </div>
         </div>
+        <div className='container'></div>
     </section>
 )
 

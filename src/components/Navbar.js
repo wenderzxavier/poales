@@ -25,7 +25,8 @@ class Navbar extends Component {
                         <h1 id='logo-text'>POALES</h1>
                     </a>
                 </div>
-                <a className='navbar-link' href='http://localhost:3000/#'>The Project</a>
+                <a className='navbar-link' href='#about'>The Project</a>
+                <a className='navbar-link' href='http://localhost:3000/#'>Services</a>
                 <a className='navbar-link' href='http://localhost:3000/#'>Team</a>
                 <a className='navbar-link' href='http://localhost:3000/#'>Partners</a>
             </nav>

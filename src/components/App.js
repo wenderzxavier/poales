@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import Navbar from './Navbar';
 import Cover from './Cover';
+import About from './About';
 
 class App extends Component {
   render() {
@@ -10,7 +11,13 @@ class App extends Component {
         <header>
           <Navbar />
         </header>
-        <Cover />
+        <main>
+          <Cover />
+          <About />
+        </main>
+        <footer>
+
+        </footer>
       </div>
     );
   }
