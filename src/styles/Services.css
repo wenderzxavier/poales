@@ -1,0 +1,54 @@
+#services{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px 30px 15px;
+    transition: .5s;
+    text-decoration: none;
+    color: black;
+}
+
+.service-img{
+    max-width: 100%;
+    height: auto;
+    max-height: 800px;
+}
+
+.service-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.service-info p{
+    max-width: 1200px;
+}
+
+.service-header{
+    font-size: 40px;
+    transition: .5s;
+}
+
+#service-monitor:hover{
+    box-shadow: 8px 8px 50px #ddd, -5px -5px 15px #ddd;
+    transition: .5s;
+}
+
+#service-calculator:hover{
+    box-shadow: 8px 8px 50px #ddd, -5px -5px 15px #ddd;
+    transition: .5s;
+}
+
+#service-profile:hover{
+    box-shadow: 8px 8px 50px #ddd, -5px -5px 15px #ddd;
+    transition: .5s;
+}

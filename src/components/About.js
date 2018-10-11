@@ -18,8 +18,8 @@ const About = () => (
                 </div>
             </div>
         </div>
-        <div>
-            <header className='heading-center'><h1>The Process</h1></header>
+        <div id='section-process'>
+            <header><h1 className='heading-center'>The Process</h1></header>
             <div className='about-grid'>
                 <div className='flux'>
                     <h2><span className='circle'>1</span>Register and Find</h2>
