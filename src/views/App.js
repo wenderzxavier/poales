@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import '../styles/App.css';
-import Navbar from './Navbar';
-import Cover from './Cover';
-import About from './About';
-import Services from './Services';
+import React, { Component } from 'react'
+import '../styles/App.css'
+import Navbar from '../components/Navbar'
+import Cover from '../components/Cover'
+import About from '../components/About'
+import Services from '../components/Services'
+import Footer from '../components/Footer'
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
           <Services />
         </main>
         <footer>
-
+          <Footer />
         </footer>
       </div>
     );
