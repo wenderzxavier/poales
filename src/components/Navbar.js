@@ -10,10 +10,11 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-        window.onscroll = () => {
-            (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ?
-            this.changeNavColor('black', 'flex') : this.changeNavColor('transparent', 'none')
-        }
+        this.props.color !== '' ? this.changeNavColor(this.props.color, 'flex') :
+            (window.onscroll = () => {
+                (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ?
+                    this.changeNavColor('black', 'flex') : this.changeNavColor('transparent', 'none')
+            })
     }
 
     render() {

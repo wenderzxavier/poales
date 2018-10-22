@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <Navbar />
+          <Navbar color=''/>
         </header>
         <main>
           <Cover />

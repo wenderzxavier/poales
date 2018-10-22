@@ -6,7 +6,7 @@ import RegisterForm from '../components/RegisterForm'
 const Register = () => (
     <div>
         <header>
-            <Navbar />
+            <Navbar color='#252930'/>
         </header>
         <main>
             <RegisterForm />
