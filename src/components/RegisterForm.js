@@ -2,45 +2,32 @@ import React from 'react'
 import '../styles/RegisterForm.css'
 
 const RegisterForm = () => (
-    <section id='register-form'>
-        <header>
-            <h1>Registration Form</h1>
-        </header>
-        <form action='/'>
-            <div>
-                <label for='nome-empresa'>Social Name
-            <input type='text' id='nome-empresa' name='nome-empresa' placeholder='WZX S.A.' required />
-                </label>
-            </div>
-            <div>
-                <label for='id'>Employer ID Number
-            <input type='text' id='id' name='id' placeholder='102.365.9662.75/25-45' required />
-                </label>
-            </div>
-            <div>
-                <label for='location'>Location
-            <input type='text' id='location' name='location' required />
-                </label>
-            </div>
-            <div>
-                <div>
-                    Product:
+    <section id='register-background'>
+        <form action='/' className='register-form'>
+            <div className='overview-data'>
+                <legend>
+                    Registration Form
+            </legend>
+                <div className='input-text'>
+                    <input type='text' id='nome-empresa' name='nome-empresa' placeholder='Company Name' required />
+                    <input type='text' id='id' name='id' placeholder='Employer ID Number' required />
+                    <input type='text' id='location' name='location' placeholder='Location' required />
                 </div>
-                <label for='mel'>
-                    <input type='checkbox' id='mel' name='product-type' /> Honey
-                </label>
-                <label for='cafe'>
+            </div>
+            <div className='product-picker'>
+                <legend>
+                    Select the products you work with:
+                </legend>
+                <div className='product-select'>
+                    <label className='product'>
+                        <p>Honey</p>
+                        <input type='checkbox' id='mel' name='product-type' />
+                    </label>
                     <input type='checkbox' id='cafe' name='product-type' /> Coffee
-                </label>
-                <label for='cachaca'>
                     <input type='checkbox' id='cachaca' name='product-type' /> Licor
-                </label>
-                <label for='laticionios'>
                     <input type='checkbox' id='laticinios' name='product-type' /> Dairy
-                </label>
-                <label for='cotton'>
                     <input type='checkbox' id='cotton' name='product-type' /> Cotton
-                </label>
+                </div>
             </div>
             <div>
                 <div>
@@ -70,17 +57,17 @@ const RegisterForm = () => (
             </div>
             <div>
                 <label for='photos'>Production Photos:
-                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' multiple/>
+                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' multiple />
                 </label>
             </div>
             <div>
                 <label for='video'>Cover Video:
-                    <input type='file' id='video' name='video' accept='video/*'/>
+                    <input type='file' id='video' name='video' accept='video/*' />
                 </label>
             </div>
             <div>
                 <label for='bio'>Bio
-                    <textarea rows='5' columns='15'/>
+                    <textarea rows='5' columns='15' />
                 </label>
             </div>
             <div>
@@ -107,7 +94,7 @@ const RegisterForm = () => (
             </div>
             <div>
                 <label for='veracity'>Bio
-                    <textarea rows='5' columns='15'/>
+                    <textarea rows='5' columns='15' />
                 </label>
             </div>
             <input type='submit' name='sumit' value='Submit' />

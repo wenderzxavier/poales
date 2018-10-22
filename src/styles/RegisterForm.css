@@ -1,7 +1,68 @@
+#register-background{
+    background: url('../img/farmers.jpg') center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #register-form{
-    background-color: white;
+    margin: auto;
+}
+
+.register-form{
+    background-color: rgba(255,255,255, .8);
     max-width: 1200px;
     width: 80%;
-    margin: 0 auto;
-    margin-top: 100px;
+    padding: 40px;
 }
+
+.overview-data legend{
+    font-size: 30px;
+    color: green;
+}
+
+.product-select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.input-text input{
+    width: 30%;
+    font-size: 18px;
+    line-height: 18px;
+    outline: none;
+    border: 2px solid rgb(221, 155, 95);
+    border-width: 0px 0px 2px 0px;
+}
+
+.input-text input::placeholder{
+    font-size: 18px;
+    line-height: 16px;
+    color: rgb(61, 38, 17);
+}
+
+.input-text input:focus{
+    border-color: green;
+}
+
