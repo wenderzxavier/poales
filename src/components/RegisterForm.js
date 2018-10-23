@@ -1,6 +1,8 @@
 import React from 'react'
 import Products from '../utils/Products'
 import '../styles/RegisterForm.css'
+import Certifications from '../utils/Certifications'
+import Profile from '../img/user.svg'
 
 const RegisterForm = () => (
     <section id='register-background' className='background-image'>
@@ -10,25 +12,27 @@ const RegisterForm = () => (
             </legend>
             <div className='farmer-data flex-column'>
                 <div>
-                    <label for='avatar'>Escolher Avatar
-                    <input type='file' id='avatar' name='avatar' accept='image/png, image/jpeg' />
+                    <label htmlFor='avatar' className='profile-img-label'>
+                        <img src={Profile} alt='Profile Icon' id='profile-pic'></img>
+                        <p>Clique para alterar avatar</p>
+                        <input type='file' id='avatar' name='avatar' accept='image/png, image/jpeg' className='register-img-input' />
                     </label>
                 </div>
                 <div>
-                    <label for='bio'>Bio
-                    <textarea rows='5' columns='15' />
+                    <label htmlFor='bio'>
+                    <textarea rows='20' columns='15' placeholder='Short Bio' className='input-text' id='bio'/>
+                    </label>
+                </div>
+                {/* <div>
+                    <label htmlFor='photos'>Production Photos:
+                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' multiple className='register-img-input' />
                     </label>
                 </div>
                 <div>
-                    <label for='photos'>Production Photos:
-                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' multiple />
+                    <label htmlFor='video'>Cover Video:
+                    <input type='file' id='video' name='video' accept='video/*' className='register-img-input' />
                     </label>
-                </div>
-                <div>
-                    <label for='video'>Cover Video:
-                    <input type='file' id='video' name='video' accept='video/*' />
-                    </label>
-                </div>
+                </div> */}
             </div>
             <div className='product-data flex-column'>
                 <div className='overview-data'>
@@ -42,50 +46,49 @@ const RegisterForm = () => (
                     <legend>
                         Select the products you work with:
                 </legend>
-                    <div className='product-select'>
+                    <div className='checkbox-select'>
                         {Products.map((data, key) => (
-                            <label key={key} className='product' htmlFor={data.name.toLowerCase()}>
-                                <img src={data.img} className='product-icon' alt={`${data.name} icon`}></img>
-                                <p>{data.name}</p>
-                                <input type='checkbox' id={data.name.toLowerCase()} name='product-type' />
-                            </label>
+                            <div key={key}>
+                                <input type='checkbox' id={data.name.toLowerCase()} name='product-type' className='product-checkbox' />
+                                <label key={key} className='product wrap-checkbox' htmlFor={data.name.toLowerCase()}>
+                                    {data.img}
+                                    <p>{data.name}</p>
+                                </label>
+                            </div>
                         ))}
                     </div>
                 </div>
                 <div>
-                    <textarea id='register-textarea' rows='10' cols='15' placeholder={`Tell more about your product:${'\n\n'}Information related to amount produced, type of grains, production time`} className='input-text'></textarea>
+                    <textarea id='register-textarea' rows='8' cols='15' placeholder={`Tell more about your product:${'\n\n'}Information related to amount produced, type of grains, production time`} className='input-text'></textarea>
                 </div>
                 <div className='flex-text-fields'>
                     <legend>
                         Specify the metric for the following fields (e.g. gallons, liters):
-                    </legend>                    
-                <input type='text' id='production' name='production' placeholder='Monthly Production (specify the metric)' className='input-text' required />
-                    <input type='text' id='growth-capacity' name='growth-capacity' placeholder='Growth capacity (specify the metric)' className='input-text' required />
-                    <input type='text' id='destiny' name='destiny' placeholder='Current Buyers:' className='input-text' required />
+                    </legend>
+                    <input type='text' id='production' name='production' placeholder='Monthly Production' className='input-text' required />
+                    <input type='text' id='growth-capacity' name='growth-capacity' placeholder='Growth capacity' className='input-text' required />
+                    <input type='text' id='destiny' name='destiny' placeholder='Current Buyers' className='input-text' required />
                 </div>
                 <div>
-                    <div>
+                    <legend>
                         Cerfitications:
+                    </legend>
+                    <div className='checkbox-select'>
+                        {Certifications.map((data, key) => (
+                            <div key={key}>
+                                <input type='checkbox' id={`certification-${key}`} name='certification-type' className='certification-checkbox' />
+                                <label htmlFor={`certification-${key}`} className='certification wrap-checkbox'>
+                                    <img src={data.img} alt='Certification' className='certification-icon'></img>
+                                </label>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                    <label for='mel'>
-                        <input type='checkbox' id='mel' name='certification' /> Certification 1
-                </label>
-                    <label for='cafe'>
-                        <input type='checkbox' id='cafe' name='certification' /> Certification 2
-                </label>
-                    <label for='cachaca'>
-                        <input type='checkbox' id='cachaca' name='certification' /> Certification 3
-                </label>
-                    <label for='laticionios'>
-                        <input type='checkbox' id='laticinios' name='certification' /> Certification 4
-                </label>
-                </div>
-
             </div>
             <div className='terms-conditions'>
                 <div>
                     <label htmlFor='agreement'>
-                        <input type='checkbox' id='agreement' name='agreement' />I agree to the terms and conditions.
+                        I agree to the terms and conditions.<input type='checkbox' id='agreement' name='agreement' />
                     </label>
                 </div>
                 <input type='submit' name='sumit' value='Submit' />
