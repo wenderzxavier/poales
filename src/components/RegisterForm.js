@@ -1,6 +1,6 @@
 import React from 'react'
 import Products from '../utils/Products'
-import '../styles/RegisterForm.css'
+import '../styles/Register.css'
 import Certifications from '../utils/Certifications'
 import Profile from '../img/user.svg'
 

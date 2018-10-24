@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import RegisterForm from '../components/RegisterForm'
-import '../styles/RegisterForm.css'
+import '../styles/Register.css'
 
 const Register = () => (
     <div>
