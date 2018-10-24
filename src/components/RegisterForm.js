@@ -18,21 +18,17 @@ const RegisterForm = () => (
                         <input type='file' id='avatar' name='avatar' accept='image/png, image/jpeg' className='register-img-input' />
                     </label>
                 </div>
-                <div>
-                    <label htmlFor='bio'>
-                    <textarea rows='20' columns='15' placeholder='Short Bio' className='input-text' id='bio'/>
-                    </label>
-                </div>
-                {/* <div>
-                    <label htmlFor='photos'>Production Photos:
-                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' multiple className='register-img-input' />
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor='video'>Cover Video:
+                <label htmlFor='bio'>
+                    <textarea rows='20' columns='15' placeholder='Short Bio' className='input-text' id='bio' />
+                </label>
+                <label htmlFor='photos' className='input-file-img'>Production Photos:
+                        <i className="far fa-images fa-lg icon-upload"></i>
+                    <input type='file' id='photos' name='photos' accept='image/png, image/jpeg' className='register-img-input' multiple />
+                </label>
+                <label htmlFor='video' className='input-file-img'>Cover Video:
+                    <i className="fas fa-video fa-lg icon-upload"></i>
                     <input type='file' id='video' name='video' accept='video/*' className='register-img-input' />
-                    </label>
-                </div> */}
+                </label>
             </div>
             <div className='product-data flex-column'>
                 <div className='overview-data'>
@@ -91,7 +87,7 @@ const RegisterForm = () => (
                         I agree to the terms and conditions.<input type='checkbox' id='agreement' name='agreement' />
                     </label>
                 </div>
-                <input type='submit' name='sumit' value='Submit' />
+                <input type='submit' name='sumit' value='Submit' id='register-submit' />
             </div>
         </form>
     </section>

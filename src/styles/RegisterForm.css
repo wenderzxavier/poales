@@ -181,6 +181,7 @@
 .terms-conditions{
     width: 100%;
     text-align: right;
+    margin-top: 25px;
 }
 
 .register-img-input{
@@ -196,6 +197,36 @@
     max-width: 140px;
 }
 
+#register-submit{
+    margin-top: 20px;
+    width: 140px;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 5%;
+    border: none;
+    background: rgba(0, 128, 0, .8);
+    color: white;
+    cursor: pointer;
+}
+
+#register-submit:hover{
+    box-shadow: 2px 2px 15px gray, -2px -2px 15px rgb(204, 202, 202);
+}
+
+.input-file-img{
+    margin: 10px auto;
+    padding: 5px 0;
+    border: 2px solid green;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+}
+
+.icon-upload{
+    color: green;
+    margin: 0 15px;
+}
+
 @media screen and (max-width: 1000px){
     .register-form{
         margin: 150px 0px 100px 0;
@@ -204,10 +235,7 @@
         align-items: flex-start;
     }
 
-    .farmer-data{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .farmer-data{               
         width: 100%;
     }
 
@@ -216,7 +244,19 @@
     }
 
     #bio{
-        height: 12em;
+        width: 100%;
+        height: 4em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .flex-text-fields input{
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    #bio{
+        width: 100%;
     }
 
 }

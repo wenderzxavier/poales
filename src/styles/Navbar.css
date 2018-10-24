@@ -17,8 +17,7 @@
 }
 
 #logo{
-    max-height: 50px;
-    width: 50px;
+    color: green;
 }
 
 #logo-text{
@@ -34,6 +33,13 @@
     align-items: center;
     text-decoration: none;
     display: none;
+    width: 240px;
+
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 0px 10px;
+    color: white;
 }
 
 .navbar-link{

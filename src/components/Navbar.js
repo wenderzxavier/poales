@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from '../img/leaf.svg';
 import '../styles/Navbar.css';
 
 class Navbar extends Component {
@@ -22,7 +21,7 @@ class Navbar extends Component {
             <nav id='nav-bar'>
                 <div className='navbar-logo'>
                     <a id='homepage-link' href='http://localhost:3000/#' alt='Link to Homepage'>
-                        <img id='logo' src={logo} alt='Leaf Icon' />
+                    <i id='logo' className="fas fa-leaf"></i>
                         <h1 id='logo-text'>POALES</h1>
                     </a>
                 </div>
